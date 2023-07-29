@@ -1,0 +1,50 @@
+<app-header></app-header>
+<app-aside></app-aside>
+<div class="categories">
+  <div class="cleats-page-main">
+    <div class="containers-header">
+      <div class="header-left">
+        <div class="search">
+          <input type="text" placeholder="Search">
+          <img [src]="'/assets/images/search-icon.png'">
+        </div>
+        <div class="brand">
+          <select name="brand" id="brand">
+            <option value="">Choice Brand</option>
+            <option value="nike">NIKE</option>
+            <option value="adidas">Adidas</option>
+            <option value="puma">Puma</option>
+          </select>
+        </div>
+      </div>
+      <div class="header-right">
+        <img (click)="listChangeRow()" [src]="'/assets/images/row3-cion.png'">
+        <img (click)="listChangeColumn()" [src]="'/assets/images/column-icon.png'">
+      </div>
+    </div>
+    <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
+      <ng-container *ngFor="let cleat of cleats">
+        <div class="container">
+          <div class="brand">
+            <img [src]="cleat.brand">
+          </div>
+          <div class="image">
+            <img [src]="cleat.image">
+          </div>
+          <div class="title">
+            <p>{{ cleat.title }}</p>
+          </div>
+          <div class="price-cart">
+            <div class="price">
+              <p>{{ cleat.price }}</p>
+            </div>
+            <div class="add-cart">
+              <img [src]="'/assets/images/cart-icon.png'">
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -8,6 +8,11 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
+import { CleatsPageComponent } from './cleats-page/cleats-page.component';
+import { BallsPageComponent } from './balls-page/balls-page.component';
+import { JerseyPageComponent } from './jersey-page/jersey-page.component';
+import { ShortsPageComponent } from './shorts-page/shorts-page.component';
+import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { AsideComponent } from './aside/aside.component';
     AboutPageComponent,
     HeaderComponent,
     FooterComponent,
-    AsideComponent
+    AsideComponent,
+    CleatsPageComponent,
+    BallsPageComponent,
+    JerseyPageComponent,
+    ShortsPageComponent,
+    BaseLayersPageComponent
   ],
   imports: [
     BrowserModule,
