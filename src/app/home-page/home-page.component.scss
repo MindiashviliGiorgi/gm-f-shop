@@ -1,0 +1,120 @@
+.home-page-main {
+  width: 1220px;
+  height: auto;
+  margin: 42px 250px;
+  .container-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    .top {
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+      align-items: center;
+      .container {
+        flex: 1;
+        width: 100%;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        box-shadow: 1px 5px 10px #a2a2a2;
+        transition: 0.3s;
+        &:hover {
+          transform: translateY(-10px);
+          transition: 0.3s;
+          box-shadow: 1px 5px 10px #696969;
+        }
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: auto;
+          h3 {
+            color: #fff;
+            font-size: 55px;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 10px #000;
+          }
+        }
+      }
+      .cleats {
+        background: url('/assets/images/cleats-img.jpeg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+      .balls {
+        background: url('/assets/images/ball-img.jpeg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+      .jersey {
+        background: url('/assets/images/zidane-image.jpeg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+      align-items: center;
+      .container {
+        flex: 1;
+        width: 100%;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        box-shadow: 1px 5px 10px #a2a2a2;
+        transition: 0.3s;
+        border-radius: 10px;
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: auto;
+          h3 {
+            color: #fff;
+            font-size: 55px;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 10px #000;
+          }
+        }
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-10px);
+          transition: 0.3s;
+          box-shadow: 1px 5px 10px #696969;
+        }
+      }
+      .shorts {
+          background: url('/assets/images/shorts-imggg.jpg');
+          background-position: center;
+          background-size: cover;
+          border-radius: 10px;
+          position: relative;
+          cursor: pointer;
+      }
+      .base {
+          background: url('/assets/images/base-layers.png');
+          background-position: center;
+          background-size: cover;
+          border-radius: 10px;
+          position: relative;
+          cursor: pointer;
+      }
+    }
+  }
+}

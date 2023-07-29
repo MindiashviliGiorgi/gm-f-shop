@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 interface Cleats {
   image : string;
@@ -102,5 +102,19 @@ export class CleatsPageComponent {
     this.listRow = true;
     this.listColumn = false;
   }
+
+  searchValue:string = '';
+  searchBrandValue:string = '';
+
+  searchTextChange : EventEmitter<string> = new EventEmitter<string>();
+  searchItem(){
+    this.searchTextChange.emit(this.searchValue)
+  }
+
+  searchBrand : EventEmitter<string> = new EventEmitter<string>();
+  searchItemBrand(){
+    this.searchBrand.emit(this.searchBrandValue)
+  }
+
 
 }

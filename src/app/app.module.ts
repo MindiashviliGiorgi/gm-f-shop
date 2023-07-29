@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { BallsPageComponent } from './balls-page/balls-page.component';
 import { JerseyPageComponent } from './jersey-page/jersey-page.component';
 import { ShortsPageComponent } from './shorts-page/shorts-page.component';
 import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.component';
+import { ItemPageComponent } from './item-page/item-page.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.com
     BallsPageComponent,
     JerseyPageComponent,
     ShortsPageComponent,
-    BaseLayersPageComponent
+    BaseLayersPageComponent,
+    ItemPageComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

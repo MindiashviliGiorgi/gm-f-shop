@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CleatsPageComponent } from './cleats-page/cleats-page.component';
 import { BallsPageComponent } from './balls-page/balls-page.component';
+import { ItemPageComponent } from './item-page/item-page.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path : 'ballsPage',
     component : BallsPageComponent
+  },
+  {
+    path : 'itemPage',
+    component : ItemPageComponent
+  },
+  {
+    path : 'carousel',
+    component : CarouselComponent
   }
 ];
 

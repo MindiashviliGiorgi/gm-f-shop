@@ -5,11 +5,18 @@
     <div class="containers-header">
       <div class="header-left">
         <div class="search">
-          <input type="text" placeholder="Search">
+          <input type="text"
+            [(ngModel)]="searchValue"
+            (input)="searchItem()"
+            placeholder="Search"
+            />
           <img [src]="'/assets/images/search-icon.png'">
         </div>
         <div class="brand">
-          <select name="brand" id="brand">
+          <select name="brand" id="brand"
+            [(ngModel)]="searchBrandValue"
+            (input)="searchItemBrand()"
+          >
             <option value="">Choice Brand</option>
             <option value="nike">NIKE</option>
             <option value="adidas">Adidas</option>
@@ -24,25 +31,27 @@
     </div>
     <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
       <ng-container *ngFor="let cleat of cleats">
-        <div class="container">
-          <div class="brand">
-            <img [src]="cleat.brand">
-          </div>
-          <div class="image">
-            <img [src]="cleat.image">
-          </div>
-          <div class="title">
-            <p>{{ cleat.title }}</p>
-          </div>
-          <div class="price-cart">
-            <div class="price">
-              <p>{{ cleat.price }}</p>
+        <ng-container *ngIf="searchBrandValue === '' || cleat.brand.toLowerCase().includes(searchBrandValue)">
+          <div class="container" *ngIf="searchValue === '' || cleat.title.toLowerCase().includes(searchValue)">
+            <div class="brand">
+              <img [src]="cleat.brand">
             </div>
-            <div class="add-cart">
-              <img [src]="'/assets/images/cart-icon.png'">
+            <div class="image">
+              <img [src]="cleat.image">
+            </div>
+            <div class="title">
+              <p [routerLink]="'/itemPage'">{{ cleat.title }}</p>
+            </div>
+            <div class="price-cart">
+              <div class="price">
+                <p>{{ cleat.price }}</p>
+              </div>
+              <div class="add-cart">
+                <img [src]="'/assets/images/cart-icon.png'">
+              </div>
             </div>
           </div>
-        </div>
+        </ng-container>
       </ng-container>
     </div>
   </div>
