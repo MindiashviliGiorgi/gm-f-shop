@@ -8,24 +8,24 @@
           <h3>Cleats</h3>
         </div>
       </div>
-      <div class="container balls">
+      <div [routerLink]="'/ballsPage'" class="container balls">
         <div class="title">
           <h3>Balls</h3>
         </div>
       </div>
-      <div class="container jersey">
+      <div [routerLink]="'/jerseyPage'" class="container jersey">
         <div class="title">
           <h3>Jerseys</h3>
         </div>
       </div>
     </div>
     <div class="bottom">
-      <div class="container shorts">
+      <div [routerLink]="'/shortsPage'" class="container shorts">
         <div class="title">
           <h3>Shorts</h3>
         </div>
       </div>
-      <div class="container base">
+      <div [routerLink]="'/baseLayersPage'" class="container base">
         <div class="title">
           <h3>Base Layers</h3>
         </div>
@@ -33,3 +33,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

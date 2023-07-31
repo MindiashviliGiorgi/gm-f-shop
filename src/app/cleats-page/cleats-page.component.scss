@@ -162,8 +162,8 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 280px 280px 280px 280px;
-  grid-template-rows: 330px 330px 330px;
+  grid-template-columns: repeat(4, 280px);
+  grid-template-rows: repeat(auto, 330px);
   grid-row-gap: 33px;
   grid-column-gap: 33px;
 }

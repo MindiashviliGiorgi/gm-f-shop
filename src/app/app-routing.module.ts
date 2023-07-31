@@ -5,6 +5,9 @@ import { CleatsPageComponent } from './cleats-page/cleats-page.component';
 import { BallsPageComponent } from './balls-page/balls-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { JerseyPageComponent } from './jersey-page/jersey-page.component';
+import { ShortsPageComponent } from './shorts-page/shorts-page.component';
+import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.component';
 
 const routes: Routes = [
   {
@@ -24,8 +27,16 @@ const routes: Routes = [
     component : ItemPageComponent
   },
   {
-    path : 'carousel',
-    component : CarouselComponent
+    path : 'jerseyPage',
+    component : JerseyPageComponent
+  },
+  {
+    path : 'shortsPage',
+    component : ShortsPageComponent
+  },
+  {
+    path : 'baseLayersPage',
+    component : BaseLayersPageComponent
   }
 ];
 
