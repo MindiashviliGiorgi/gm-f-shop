@@ -16,6 +16,11 @@ import { ShortsPageComponent } from './shorts-page/shorts-page.component';
 import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { ContainerComponent } from './container/container.component';
+import { CleatComponent } from './cleats-page/cleat/cleat.component';
+import { CleatsPageModule } from './cleats-page/cleats-page.module';
 
 @NgModule({
   declarations: [
@@ -31,12 +36,17 @@ import { CarouselComponent } from './carousel/carousel.component';
     ShortsPageComponent,
     BaseLayersPageComponent,
     ItemPageComponent,
-    CarouselComponent
+    CarouselComponent,
+    ContactPageComponent,
+    CartPageComponent,
+    ContainerComponent,
+    CleatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CleatsPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

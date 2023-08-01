@@ -30,28 +30,8 @@
       </div>
     </div>
     <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
-      <ng-container *ngFor="let cleat of cleats">
-        <ng-container *ngIf="searchBrandValue === '' || cleat.brand.toLowerCase().includes(searchBrandValue)">
-          <div class="container" *ngIf="searchValue === '' || cleat.title.toLowerCase().includes(searchValue)">
-            <div class="brand">
-              <img [src]="cleat.brand">
-            </div>
-            <div class="image">
-              <img [src]="cleat.image">
-            </div>
-            <div class="title">
-              <p [routerLink]="'/itemPage'">{{ cleat.title }}</p>
-            </div>
-            <div class="price-cart">
-              <div class="price">
-                <p>{{ cleat.price }}</p>
-              </div>
-              <div class="add-cart">
-                <img [src]="'/assets/images/cart-icon.png'">
-              </div>
-            </div>
-          </div>
-        </ng-container>
+      <ng-container *ngFor="let singleCleat of cleats; let i = index">
+        <app-cleat [cleat]="singleCleat"></app-cleat>
       </ng-container>
     </div>
   </div>

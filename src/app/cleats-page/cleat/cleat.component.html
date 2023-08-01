@@ -1,0 +1,20 @@
+    <div class="container">
+      <div class="brand">
+        <img [src]="cleat.brand">
+      </div>
+      <div class="image">
+        <img [src]="cleat.image">
+      </div>
+      <div class="title">
+        <p [routerLink]="'/itemPage'">{{ cleat.title }}</p>
+      </div>
+      <div class="price-cart">
+        <div class="price">
+          <p>{{ cleat.price }}</p>
+        </div>
+        <div class="add-cart">
+          <button (click)="addToCard()">Add To Card</button>
+          <img [src]="'/assets/images/cart-icon.png'">
+        </div>
+      </div>
+    </div>
