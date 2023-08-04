@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Cleat } from 'src/app/types/Cleats';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Cleat } from '../../types/Cleat';
 
 @Component({
   selector: 'app-cleat',
@@ -8,16 +8,15 @@ import { Cleat } from 'src/app/types/Cleats';
 })
 export class CleatComponent {
 
-  @Input() cleat : Cleat = {} as Cleat;
+  @Input() cleat: Cleat = {} as Cleat;
+  @Output() cleatEmitter = new EventEmitter<Cleat>();
 
-  constructor(){}
+  constructor() {}
 
   ngOnInit():void {}
 
   addToCard(){
-    
+    this.cleatEmitter.emit(this.cleat)
   }
-
-
 
 }

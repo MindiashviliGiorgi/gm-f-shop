@@ -1,7 +1,7 @@
 export interface Cleat {
   image : string;
   title : string;
-  price : string;
+  price : number;
   brand : string;
 }
 

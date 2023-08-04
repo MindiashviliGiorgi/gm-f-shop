@@ -20,6 +20,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ContainerComponent } from './container/container.component';
 import { CleatComponent } from './cleats-page/cleat/cleat.component';
+import { CleatsPageService } from './cleats-page/cleats-page.service';
 import { CleatsPageModule } from './cleats-page/cleats-page.module';
 
 @NgModule({
@@ -38,9 +39,8 @@ import { CleatsPageModule } from './cleats-page/cleats-page.module';
     ItemPageComponent,
     CarouselComponent,
     ContactPageComponent,
-    CartPageComponent,
-    ContainerComponent,
-    CleatComponent
+    ContainerComponent
+    // CleatComponent
   ],
   imports: [
     BrowserModule,

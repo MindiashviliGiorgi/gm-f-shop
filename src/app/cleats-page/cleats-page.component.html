@@ -31,7 +31,7 @@
     </div>
     <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
       <ng-container *ngFor="let singleCleat of cleats; let i = index">
-        <app-cleat [cleat]="singleCleat"></app-cleat>
+        <app-cleat (cleatEmitter)="addToCard($event)" [cleat]="singleCleat"></app-cleat>
       </ng-container>
     </div>
   </div>

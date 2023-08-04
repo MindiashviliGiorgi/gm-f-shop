@@ -1,9 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CleatsService } from './cleats.service';
-import { Cleat } from '../types/Cleats';
-
-
-
+import { Cleat } from '../types/Cleat';
+import { CleatsPageService } from './cleats-page.service';
 
 
 @Component({
@@ -13,14 +10,21 @@ import { Cleat } from '../types/Cleats';
 })
 export class CleatsPageComponent {
 
-  constructor(private cleatsService : CleatsService) {}
+  cleats: Cleat[] = [];
+
+  constructor(private cleatsPageService : CleatsPageService) {}
 
   ngOnInit() : void {
-    this.cleats = this.cleatsService.getCleats();
     this.listRow = true;
+    this.cleats = this.cleatsPageService.getCleats()
   };
+ 
 
-  cleats: Cleat[] = [];
+  card: Cleat[] = [];
+
+  addToCard(cleat : Cleat){
+    console.log(cleat)
+  }
 
 
   
