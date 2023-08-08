@@ -23,6 +23,7 @@ import { CleatComponent } from './cleats-page/cleat/cleat.component';
 import { CleatsPageService } from './cleats-page/cleats-page.service';
 import { CleatsPageModule } from './cleats-page/cleats-page.module';
 import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.component';
+import { CartLengthComponent } from './cart-length/cart-length.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,9 @@ import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.com
     CarouselComponent,
     ContactPageComponent,
     ContainerComponent,
-    PageCleatsPageComponent
-    // CleatComponent
+    PageCleatsPageComponent,
+    CartPageComponent,
+    CartLengthComponent
   ],
   imports: [
     BrowserModule,

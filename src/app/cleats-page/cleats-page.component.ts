@@ -20,11 +20,11 @@ export class CleatsPageComponent {
   };
  
 
-  card: Cleat[] = [];
+  // cart : Cleat[] = [];
 
-  addToCard(cleat : Cleat){
-    console.log(cleat)
-  }
+  // addToCard(cleat : Cleat){
+  //   console.log(cleat)
+  // }
 
 
   

@@ -1,4 +1,17 @@
-<!-- <app-header></app-header>
-<app-aside></app-aside> -->
-<div class="cart-main"></div>
-<!-- <app-footer></app-footer> -->
+<app-header></app-header>
+<app-aside></app-aside>
+<div class="cart-page-main">
+  <h1 *ngIf="getCart().length > 1;">Your cart list</h1>
+  <h1 *ngIf="getCart().length == 0;">Your cart list is empty</h1>
+  <div class="containers-list" *ngFor="let cleat of getCart()">
+    <div class="container">
+      <div class="title">
+        <p [routerLink]="'/itemPage'">{{ cleat.title }}</p>
+      </div>
+      <div class="price">
+        <p>${{ cleat.price }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-aside></app-aside>

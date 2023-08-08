@@ -58,9 +58,22 @@
       }
     }
     .add-cart {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 10px;
+      padding: 3px 10px;
+      border: 1px solid #cacaca;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        border: 1px solid #000;
+        transition: 0.2s;
+      }
       img {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
         object-fit: cover;
       }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cleat } from '../../types/Cleat';
+import { CartService } from 'src/app/cart-page/cart.service';
 
 @Component({
   selector: 'app-cleat',
@@ -9,15 +10,22 @@ import { Cleat } from '../../types/Cleat';
 export class CleatComponent {
 
   @Input() cleat: Cleat = {} as Cleat;
-  @Output() cleatEmitter = new EventEmitter<Cleat>();
+  // @Output() cleatEmitter = new EventEmitter<Cleat>();
 
-  constructor() {}
+  constructor(private cartService : CartService) {}
 
   ngOnInit():void {}
 
   addToCard(){
-    this.cleatEmitter.emit(this.cleat)
+    this.cartService.add(this.cleat)
+    this.isInCart = true;
   }
+  removeFromCart(){
+    this.isInCart = false;
+    this.cartService.remove(this.cleat)
+  }
+
+  isInCart:boolean = false;
 
 
 

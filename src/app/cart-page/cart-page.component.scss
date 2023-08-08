@@ -1,6 +1,32 @@
-.cart-main {
+.cart-page-main {
   width: 1220px;
-  height: 80vh;
+  min-height: 80vh;
   margin: 42px 250px;
-  background-color: red;
+  .containers-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .container {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      .title {
+        p {
+          font-size: 20px;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .price {
+        p {
+          font-size: 20px;
+          color: red;
+        }
+      }
+    }
+  }
 }

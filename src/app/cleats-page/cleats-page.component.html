@@ -31,7 +31,7 @@
           <ng-container *ngFor="let singleCleat of cleats; let i = index">
             <ng-container *ngIf="searchBrandValue === '' || singleCleat.brand.toLowerCase().includes(searchBrandValue)">
               <ng-container *ngIf="searchValue === '' || singleCleat.title.toLowerCase().includes(searchValue)">
-                <app-cleat (cleatEmitter)="addToCard($event)" [cleat]="singleCleat"></app-cleat>
+                <app-cleat [cleat]="singleCleat"></app-cleat>
               </ng-container>
             </ng-container>    
           </ng-container>
