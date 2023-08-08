@@ -1,5 +1,3 @@
-<app-header></app-header>
-<app-aside></app-aside>
 <div class="categories">
   <div class="cleats-page-main">
     <div class="containers-header">
@@ -30,10 +28,13 @@
       </div>
     </div>
     <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
-      <ng-container *ngFor="let singleCleat of cleats; let i = index">
-        <app-cleat (cleatEmitter)="addToCard($event)" [cleat]="singleCleat"></app-cleat>
-      </ng-container>
+          <ng-container *ngFor="let singleCleat of cleats; let i = index">
+            <ng-container *ngIf="searchBrandValue === '' || singleCleat.brand.toLowerCase().includes(searchBrandValue)">
+              <ng-container *ngIf="searchValue === '' || singleCleat.title.toLowerCase().includes(searchValue)">
+                <app-cleat (cleatEmitter)="addToCard($event)" [cleat]="singleCleat"></app-cleat>
+              </ng-container>
+            </ng-container>    
+          </ng-container>
     </div>
   </div>
 </div>
-<app-footer></app-footer>

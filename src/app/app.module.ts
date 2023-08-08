@@ -22,6 +22,7 @@ import { ContainerComponent } from './container/container.component';
 import { CleatComponent } from './cleats-page/cleat/cleat.component';
 import { CleatsPageService } from './cleats-page/cleats-page.service';
 import { CleatsPageModule } from './cleats-page/cleats-page.module';
+import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,6 @@ import { CleatsPageModule } from './cleats-page/cleats-page.module';
     HeaderComponent,
     FooterComponent,
     AsideComponent,
-    CleatsPageComponent,
     BallsPageComponent,
     JerseyPageComponent,
     ShortsPageComponent,
@@ -39,7 +39,8 @@ import { CleatsPageModule } from './cleats-page/cleats-page.module';
     ItemPageComponent,
     CarouselComponent,
     ContactPageComponent,
-    ContainerComponent
+    ContainerComponent,
+    PageCleatsPageComponent
     // CleatComponent
   ],
   imports: [

@@ -11,6 +11,7 @@ import { BaseLayersPageComponent } from './base-layers-page/base-layers-page.com
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
   },
   {
     path : 'cleatsPage',
-    component : CleatsPageComponent
+    component : PageCleatsPageComponent
   },
   {
     path : 'ballsPage',

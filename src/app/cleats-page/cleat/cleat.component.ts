@@ -19,4 +19,6 @@ export class CleatComponent {
     this.cleatEmitter.emit(this.cleat)
   }
 
+
+
 }
