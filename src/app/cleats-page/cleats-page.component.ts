@@ -19,14 +19,6 @@ export class CleatsPageComponent {
     this.cleats = this.cleatsPageService.getCleats()
   };
  
-
-  // cart : Cleat[] = [];
-
-  // addToCard(cleat : Cleat){
-  //   console.log(cleat)
-  // }
-
-
   
   listRow:boolean = true;
   listColumn:boolean = false;

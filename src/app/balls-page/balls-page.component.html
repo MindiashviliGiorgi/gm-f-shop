@@ -1,5 +1,3 @@
-<app-header></app-header>
-<app-aside></app-aside>
 <div class="categories">
   <div class="cleats-page-main">
     <div class="containers-header">
@@ -30,29 +28,13 @@
       </div>
     </div>
     <div class="containers-list" [class.list]="listColumn" [class.rowList]="listRow">
-      <ng-container *ngFor="let ball of balls">
-        <ng-container *ngIf="searchBrandValue === '' || ball.brand.toLowerCase().includes(searchBrandValue)">
-          <div class="container" *ngIf="searchValue === '' || ball.title.toLowerCase().includes(searchValue)">
-            <div class="brand">
-              <img [src]="ball.brand">
-            </div>
-            <div class="image">
-              <img [src]="ball.image">
-            </div>
-            <div class="title">
-              <p [routerLink]="'/itemPage'">{{ ball.title }}</p>
-            </div>
-            <div class="price-cart">
-              <div class="price">
-                <p>${{ ball.price }}</p>
-              </div>
-              <div class="add-cart">
-                <img [src]="'/assets/images/cart-icon.png'">
-              </div>
-            </div>
-          </div>
-        </ng-container>
-      </ng-container>
+          <ng-container *ngFor="let singleCleat of balls; let i = index">
+            <ng-container *ngIf="searchBrandValue === '' || singleCleat.brand.toLowerCase().includes(searchBrandValue)">
+              <ng-container *ngIf="searchValue === '' || singleCleat.title.toLowerCase().includes(searchValue)">
+                <app-ball [ball]="singleCleat"></app-ball>
+              </ng-container>
+            </ng-container>    
+          </ng-container>
     </div>
   </div>
 </div>

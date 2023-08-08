@@ -1,30 +1,11 @@
 import { Component, EventEmitter } from '@angular/core';
-import { BallsPageService } from './balls-page.service';
-
-interface Balls {
-  image : string;
-  title : string;
-  price : number;
-  brand : string;
-}
-
 
 @Component({
-  selector: 'app-balls-page',
-  templateUrl: './balls-page.component.html',
-  styleUrls: ['./balls-page.component.scss']
+  selector: 'app-page-balls-page',
+  templateUrl: './page-balls-page.component.html',
+  styleUrls: ['./page-balls-page.component.scss']
 })
-export class BallsPageComponent {
-
-  balls : Balls[] = [];
-    
-
-  constructor(private ballsPageService : BallsPageService) {}
-
-  ngOnInit() : void {
-    this.listRow = true;
-    this.balls = this.ballsPageService.getBalls()
-  };
+export class PageBallsPageComponent {
 
   listRow:boolean = true;
   listColumn:boolean = false;
@@ -50,6 +31,5 @@ export class BallsPageComponent {
   searchItemBrand(){
     this.searchBrand.emit(this.searchBrandValue)
   }
-
 
 }

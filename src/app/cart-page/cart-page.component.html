@@ -8,10 +8,27 @@
       <div class="title">
         <p [routerLink]="'/itemPage'">{{ cleat.title }}</p>
       </div>
+      <div class="brand">
+        <img [src]="cleat.brand">
+      </div>
       <div class="price">
         <p>${{ cleat.price }}</p>
       </div>
     </div>
   </div>
+
+  <div class="containers-list" *ngFor="let ball of getCartB()">
+    <div class="container">
+      <div class="title">
+        <p [routerLink]="'/itemPage'">{{ ball.title }}</p>
+      </div>
+      <div class="brand">
+        <img [src]="ball.brand">
+      </div>
+      <div class="price">
+        <p>${{ ball.price }}</p>
+      </div>
+    </div>
+  </div>
 </div>
-<app-aside></app-aside>
+<app-footer></app-footer>

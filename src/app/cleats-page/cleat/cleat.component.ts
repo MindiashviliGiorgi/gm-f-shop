@@ -10,7 +10,6 @@ import { CartService } from 'src/app/cart-page/cart.service';
 export class CleatComponent {
 
   @Input() cleat: Cleat = {} as Cleat;
-  // @Output() cleatEmitter = new EventEmitter<Cleat>();
 
   constructor(private cartService : CartService) {}
 
