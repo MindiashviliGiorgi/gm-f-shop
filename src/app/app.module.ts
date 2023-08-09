@@ -27,6 +27,9 @@ import { CartLengthComponent } from './cart-length/cart-length.component';
 import { BallComponent } from './balls-page/ball/ball.component';
 import { BallsPageModule } from './balls-page/balls-page.module';
 import { PageBallsPageComponent } from './page-balls-page/page-balls-page.component';
+import { PageJerseysPageComponent } from './page-jerseys-page/page-jerseys-page.component';
+import { JerseyComponent } from './jersey-page/jersey/jersey.component';
+import { JerseyPageModule } from './jersey-page/jersey-page.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,6 @@ import { PageBallsPageComponent } from './page-balls-page/page-balls-page.compon
     HeaderComponent,
     FooterComponent,
     AsideComponent,
-    JerseyPageComponent,
     ShortsPageComponent,
     BaseLayersPageComponent,
     ItemPageComponent,
@@ -46,14 +48,16 @@ import { PageBallsPageComponent } from './page-balls-page/page-balls-page.compon
     PageCleatsPageComponent,
     CartPageComponent,
     CartLengthComponent,
-    PageBallsPageComponent
+    PageBallsPageComponent,
+    PageJerseysPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CleatsPageModule,
-    BallsPageModule
+    BallsPageModule,
+    JerseyPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.component';
 import { PageBallsPageComponent } from './page-balls-page/page-balls-page.component';
+import { PageJerseysPageComponent } from './page-jerseys-page/page-jerseys-page.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
   {
     path : 'jerseyPage',
-    component : JerseyPageComponent
+    component : PageJerseysPageComponent
   },
   {
     path : 'shortsPage',

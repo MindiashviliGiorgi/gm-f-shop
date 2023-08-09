@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CartService } from './cart.service';
 import { BallService } from './ball.service';
+import { JerseyService } from './jersey.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -9,7 +10,7 @@ import { BallService } from './ball.service';
 })
 export class CartPageComponent {
 
-  constructor(private cartService : CartService, private ballService : BallService){}
+  constructor(private cartService : CartService, private ballService : BallService, private jerseyService : JerseyService){}
 
   ngOnInit():void {}
 
@@ -19,6 +20,10 @@ export class CartPageComponent {
   getCartB(){
     return this.ballService.getB();
   }
+  getJerseyS(){
+    return this.jerseyService.getJersey();
+  }
+
 
   isEmpty : boolean = false;
   

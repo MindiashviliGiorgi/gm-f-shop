@@ -1,11 +1,6 @@
 import { Component, EventEmitter } from '@angular/core';
-
-interface Jerseys {
-  image : string;
-  title : string;
-  price : number;
-  brand : string;
-}
+import { JerseyPageService } from './jersey-page.service';
+import { Jersey } from '../types/Jersey';
 
 @Component({
   selector: 'app-jersey-page',
@@ -14,46 +9,13 @@ interface Jerseys {
 })
 export class JerseyPageComponent {
 
-  jerseys : Jerseys[] = [
-    {
-      image : "/assets/images/jersey-1.jpg",
-      title : 'Ronaldo Portugal',
-      price :  99.99,
-      brand : '/assets/images/nike-icon.png',
-    },
-    {
-      image : "/assets/images/jersey-2.jpg",
-      title : 'Messi Argentina',
-      price :  99.99,
-      brand : '/assets/images/adidas-icon.png',
-    },
-    {
-      image : "/assets/images/jersey-3.jpg",
-      title : 'Neymar PSG',
-      price :  150.00,
-      brand : '/assets/images/nike-icon.png',
-    },
-    {
-      image : "/assets/images/jersey-4.jpg",
-      title : 'Liverpool',
-      price :  79.99,
-      brand : '/assets/images/puma-icon.png',
-    },
-    {
-      image : "/assets/images/jersey-5.jpg",
-      title : 'Mbappe PSG',
-      price :  259.99,
-      brand : '/assets/images/nike-icon.png',
-    },
+  jerseys : Jersey[] = [];
 
-    
-
-  ];
-
-  constructor() {}
+  constructor(private jerseysService : JerseyPageService) {}
 
   ngOnInit() : void {
     this.listRow = true;
+    this.jerseys = this.jerseysService.getJerseys();
   };
 
   listRow:boolean = true;
