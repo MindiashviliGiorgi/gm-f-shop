@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="brand">
+    <img [src]="short.brand">
+  </div>
+  <div class="image">
+    <img [src]="short.image">
+  </div>
+  <div class="title">
+    <p [routerLink]="'/itemPage'">{{ short.title }}</p>
+  </div>
+  <div class="price-cart">
+    <div class="price">
+      <p>${{ short.price }}</p>
+    </div>
+    <div *ngIf="!isInCart" (click)="addToCard()" class="add-cart">
+      <p>Add to cart</p>
+      <img [src]="'/assets/images/cart-icon.png'">
+    </div>
+    <div *ngIf="isInCart" class="add-cart" (click)="removeFromCart()" >
+      <p>Remove from cart</p>
+      <img [src]="'/assets/images/remove-icon.png'">
+    </div>
+  </div>
+</div>

@@ -14,6 +14,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.component';
 import { PageBallsPageComponent } from './page-balls-page/page-balls-page.component';
 import { PageJerseysPageComponent } from './page-jerseys-page/page-jerseys-page.component';
+import { PageShortsPageComponent } from './page-shorts-page/page-shorts-page.component';
 
 const routes: Routes = [
   {
@@ -38,7 +39,7 @@ const routes: Routes = [
   },
   {
     path : 'shortsPage',
-    component : ShortsPageComponent
+    component : PageShortsPageComponent
   },
   {
     path : 'baseLayersPage',

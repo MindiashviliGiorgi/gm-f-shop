@@ -46,5 +46,19 @@
     </div>
   </div>
 
+  <div class="containers-list" *ngFor="let short of getShorts()">
+    <div class="container">
+      <div class="title">
+        <p [routerLink]="'/itemPage'">{{ short.title }}</p>
+      </div>
+      <div class="brand">
+        <img [src]="short.brand">
+      </div>
+      <div class="price">
+        <p>${{ short.price }}</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 <app-footer></app-footer>

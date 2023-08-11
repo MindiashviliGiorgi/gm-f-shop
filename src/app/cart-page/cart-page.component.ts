@@ -4,6 +4,7 @@ import { BallService } from './ball.service';
 import { JerseyService } from './jersey.service';
 import { Cleat } from '../types/Cleat';
 import { Jersey } from '../types/Jersey';
+import { ShortService } from './short.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -12,7 +13,12 @@ import { Jersey } from '../types/Jersey';
 })
 export class CartPageComponent {
 
-  constructor(private cartService : CartService, private ballService : BallService, private jerseyService : JerseyService){}
+  constructor(
+    private cartService : CartService,
+    private ballService : BallService,
+    private jerseyService : JerseyService,
+    private shortService : ShortService
+    ){}
 
   ngOnInit():void {}
 
@@ -26,6 +32,9 @@ export class CartPageComponent {
   }
   getJerseyS(){
     return this.jerseyService.getJersey();
+  }
+  getShorts(){
+    return this.shortService.getShort();
   }
   removeFromCart(){
     this.jerseyService.removeJersey(this.jersey)

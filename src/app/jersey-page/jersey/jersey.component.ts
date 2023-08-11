@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Jersey } from '../../types/Jersey';
-import { JerseyPageService } from '../jersey-page.service';
 import { JerseyService } from 'src/app/cart-page/jersey.service';
 
 @Component({
