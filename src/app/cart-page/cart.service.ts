@@ -11,7 +11,6 @@ export class CartService {
   constructor() { }
 
   add(cleat : Cleat){
-    console.log(cleat)
     this.cart.push(cleat);
   }
 

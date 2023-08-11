@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CartService } from './cart.service';
 import { BallService } from './ball.service';
 import { JerseyService } from './jersey.service';
+import { Cleat } from '../types/Cleat';
+import { Jersey } from '../types/Jersey';
 
 @Component({
   selector: 'app-cart-page',
@@ -14,6 +16,8 @@ export class CartPageComponent {
 
   ngOnInit():void {}
 
+  @Input() jersey : Jersey = {} as Jersey;
+
   getCart(){
     return this.cartService.get();
   }
@@ -22,6 +26,9 @@ export class CartPageComponent {
   }
   getJerseyS(){
     return this.jerseyService.getJersey();
+  }
+  removeFromCart(){
+    this.jerseyService.removeJersey(this.jersey)
   }
 
 

@@ -14,7 +14,7 @@
     </div>
     <div *ngIf="!isInCart" (click)="addToCard()" class="add-cart">
       <p>Add to cart</p>
-      <img (click)="addToCard()" [src]="'/assets/images/cart-icon.png'">
+      <img [src]="'/assets/images/cart-icon.png'">
     </div>
     <div *ngIf="isInCart" class="add-cart" (click)="removeFromCart()" >
       <p>Remove from cart</p>
