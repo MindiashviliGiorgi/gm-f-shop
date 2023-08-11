@@ -5,6 +5,7 @@ import { JerseyService } from './jersey.service';
 import { Cleat } from '../types/Cleat';
 import { Jersey } from '../types/Jersey';
 import { ShortService } from './short.service';
+import { BaseLayerService } from './baseLayer.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -17,7 +18,8 @@ export class CartPageComponent {
     private cartService : CartService,
     private ballService : BallService,
     private jerseyService : JerseyService,
-    private shortService : ShortService
+    private shortService : ShortService,
+    private baseLayerService : BaseLayerService
     ){}
 
   ngOnInit():void {}
@@ -36,8 +38,8 @@ export class CartPageComponent {
   getShorts(){
     return this.shortService.getShort();
   }
-  removeFromCart(){
-    this.jerseyService.removeJersey(this.jersey)
+  getBaseLayers(){
+    return this.baseLayerService.get();
   }
 
 

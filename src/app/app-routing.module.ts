@@ -15,6 +15,7 @@ import { PageCleatsPageComponent } from './page-cleats-page/page-cleats-page.com
 import { PageBallsPageComponent } from './page-balls-page/page-balls-page.component';
 import { PageJerseysPageComponent } from './page-jerseys-page/page-jerseys-page.component';
 import { PageShortsPageComponent } from './page-shorts-page/page-shorts-page.component';
+import { PageBaseLayersPageComponent } from './page-base-layers-page/page-base-layers-page.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,7 @@ const routes: Routes = [
   },
   {
     path : 'baseLayersPage',
-    component : BaseLayersPageComponent
+    component : PageBaseLayersPageComponent
   },
   {
     path : 'contactPage',

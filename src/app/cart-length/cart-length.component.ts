@@ -3,6 +3,7 @@ import { CartService } from '../cart-page/cart.service';
 import { BallService } from '../cart-page/ball.service';
 import { JerseyService } from '../cart-page/jersey.service';
 import { ShortService } from '../cart-page/short.service';
+import { BaseLayerService } from '../cart-page/baseLayer.service';
 
 @Component({
   selector: 'app-cart-length',
@@ -15,7 +16,8 @@ export class CartLengthComponent {
     private cartService : CartService,
     private ballService : BallService,
     private jerseyService : JerseyService,
-    private shortService : ShortService
+    private shortService : ShortService,
+    private baseLaeyrService : BaseLayerService
     ){}
 
   ngOnInit():void {}
@@ -31,6 +33,9 @@ export class CartLengthComponent {
   }
   getShorts(){
     return this.shortService.getShort();
+  }
+  getBaseLayers(){
+    return this.baseLaeyrService.get();
   }
 
 }

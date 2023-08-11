@@ -33,6 +33,9 @@ import { JerseyPageModule } from './jersey-page/jersey-page.module';
 import { ShortComponent } from './shorts-page/short/short.component';
 import { PageShortsPageComponent } from './page-shorts-page/page-shorts-page.component';
 import { ShortsPageModule } from './shorts-page/shorts-page.module';
+import { BaseLayerComponent } from './base-layers-page/base-layer/base-layer.component';
+import { BaseLayersPageModule } from './base-layers-page/base-layers-page.module';
+import { PageBaseLayersPageComponent } from './page-base-layers-page/page-base-layers-page.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,6 @@ import { ShortsPageModule } from './shorts-page/shorts-page.module';
     HeaderComponent,
     FooterComponent,
     AsideComponent,
-    BaseLayersPageComponent,
     ItemPageComponent,
     CarouselComponent,
     ContactPageComponent,
@@ -52,7 +54,8 @@ import { ShortsPageModule } from './shorts-page/shorts-page.module';
     CartLengthComponent,
     PageBallsPageComponent,
     PageJerseysPageComponent,
-    PageShortsPageComponent
+    PageShortsPageComponent,
+    PageBaseLayersPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { ShortsPageModule } from './shorts-page/shorts-page.module';
     CleatsPageModule,
     BallsPageModule,
     JerseyPageModule,
-    ShortsPageModule
+    ShortsPageModule,
+    BaseLayersPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
