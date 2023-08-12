@@ -1,6 +1,6 @@
 .click {
   width: 60px;
-  height: 100vh;
+  height: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   row-gap: 10px;
-  align-items: center;
+  margin-top: 100px;
   overflow: hidden;
   cursor: pointer;
   text-align: center;
@@ -88,4 +88,18 @@
   opacity: 1;
   transition: 0.4s;
   z-index: 5;
+}
+
+@media (max-width : 843px){
+  .click {
+    width: 45px;
+    font-size: 13px;
+    row-gap: 5px;
+    .decore {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }

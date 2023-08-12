@@ -35,6 +35,17 @@
     }
   }
   .header-right {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    .hamburger-menu {
+      display: none;
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+    }
     ul {
       display: flex;
       flex-direction: row;
@@ -63,9 +74,233 @@
     }
   }
 }
-
-@media (max-width : 1281px){
-  .header-main {
+.menu {
+  z-index: 90;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    content: '';
+    position: absolute;
     width: 100%;
+    height: 100vh;
+    inset: 0;
+    opacity: 0.9;
+    background-color: #010911;
+    z-index: 95;
+  }
+  .menu-links {
+    position: relative;
+    z-index: 96;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      position: relative;
+      span {
+        position: absolute;
+        right: 50px;
+        top: -150px;
+        z-index: 100;
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          transform: rotate(90deg);
+        }
+        &:active {
+            color: #4194c1;
+            border-color: #4194c1;
+          }
+        }
+        li {
+          list-style: none;
+          color: #fff;
+          font-size: 30px;
+          &:hover {
+              color: #4194c1;
+          }
+        }
+    }
+  }
+}
+
+@media (max-width : 1071px){
+  .header-main {
+    padding: 15px 100px;
+  }
+}
+@media (max-width : 980px){
+  .header-main {
+    padding: 15px 100px;
+    .header-right {
+      ul {
+        column-gap: 50px;
+      }
+    }
+  }
+}
+@media (max-width : 841px){
+  .header-main {
+    padding: 15px 100px;
+    .header-right {
+      ul {
+        column-gap: 35px;
+        li {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 761px){
+  .header-main {
+    padding: 15px 100px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 25px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 35px;
+        li {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 711px){
+  .header-main {
+    padding: 15px 70px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 25px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 35px;
+        li {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 651px){
+  .header-main {
+    padding: 15px 30px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 25px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 35px;
+        li {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 581px){
+  .header-main {
+    padding: 15px 30px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 22px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 35px;
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 531px){
+  .header-main {
+    padding: 15px 30px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 22px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 22px;
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 491px){
+  .header-main {
+    padding: 15px 30px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 19px;
+        }
+      }
+    }
+    .header-right {
+      ul {
+        column-gap: 22px;
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 461px){
+  .header-main {
+    padding: 15px 50px;
+    .header-left {
+      .logo {
+        h3 {
+          font-size: 22px;
+        }
+      }
+    }
+    .header-right {
+      .hamburger-menu {
+        display: flex;
+      }
+      ul {
+        display: none;
+        column-gap: 22px;
+        li {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }

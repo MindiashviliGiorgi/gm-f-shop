@@ -9,6 +9,9 @@
       </div>
     </div>
     <div class="header-right">
+      <div class="hamburger-menu" (click)="menu = true;">
+        <img [src]="'/assets/images/hamburger.png'">
+      </div>
       <ul>
         <li [routerLink]="'/'">Home</li>
         <li [routerLink]="'/contactPage'">Contact</li>
@@ -18,3 +21,16 @@
     </div>
   </div>
 </header>
+<div *ngIf="menu" class="menu">
+  <div class="menu-links">
+    <ul>
+      <span (click)="menu = false;">
+        <img [src]="'/assets/images/X.png'">
+      </span>
+      <li [routerLink]="'/'" (click)="menu = false">Home</li>
+      <li [routerLink]="'/contactPage'" (click)="menu = false">Contact</li>
+      <li [routerLink]="'/aboutPage'" (click)="menu = false">About</li>
+      <li [routerLink]="'/cartPage'" (click)="menu = false">Cart</li>
+    </ul>
+  </div>
+</div>
