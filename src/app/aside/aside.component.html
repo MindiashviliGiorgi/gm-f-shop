@@ -1,6 +1,39 @@
 <aside>
-  <div class="aside-main">
-    <div class="aside-header">
+  <div class="click" (click)="openAside = true;">
+    <div class="decore">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+      <img [src]="'/assets/images/categories.png'">
+    </div>
+    <div class="title">
+      <h1>C<br>A<br>T<br>E<br>G<br>O<br>R<br>I<br>E<br>S</h1>
+    </div>
+  </div>
+  <div class="aside-main" [class.open-aside]="openAside">
+    <div class="aside-header" (click)="openAside = false;">
+      <img [src]="'/assets/images/categories.png'">
       <h3>CATEGORIES</h3>
     </div>
     <div class="aside-links">

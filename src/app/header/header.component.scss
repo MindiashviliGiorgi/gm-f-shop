@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 15px 170px;
   position: relative;
-  z-index: 3;
+  z-index: 15;
   .decore {
     position: absolute;
     right: 147px;
@@ -61,5 +61,11 @@
           }
       }
     }
+  }
+}
+
+@media (max-width : 1281px){
+  .header-main {
+    width: 100%;
   }
 }

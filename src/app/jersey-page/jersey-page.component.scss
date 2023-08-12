@@ -1,7 +1,9 @@
 .categories {
-  width: 1220px;
-  height: auto;
-  margin: 42px 250px;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  padding: 40px 150px;
+  justify-content: center;
   .cleats-page-main {
     width: 100%;
     height: auto;
