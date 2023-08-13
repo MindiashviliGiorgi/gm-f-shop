@@ -1,7 +1,7 @@
 .item-page-main {
-  width: 1220px;
+  width: 100%;
   height: auto;
-  margin: 42px 280px;
+  padding: 40px 100px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -35,6 +35,27 @@
         border-radius: 5px;
         cursor: pointer;
       }
+    }
+  }
+}
+@media (max-width : 945px){
+  .item-page-main {
+    padding: 40px 80px;
+  }
+}
+@media (max-width : 857px){
+  .item-page-main {
+    padding: 40px 70px;
+    .item-title {
+      margin-left: 100px;
+    }
+  }
+}
+@media (max-width : 630px){
+  .item-page-main {
+    padding: 40px 35px;
+    .item-title {
+      margin-left: 100px;
     }
   }
 }
