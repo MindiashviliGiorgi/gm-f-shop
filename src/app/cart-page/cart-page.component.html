@@ -1,8 +1,9 @@
 <app-header></app-header>
 <app-aside></app-aside>
 <div class="cart-page-main">
-  <h1 *ngIf="getCart().length > 1;">Your cart list</h1>
-  <h1 *ngIf="getCart().length == 0;">Your cart list is empty</h1>
+
+  <h1>Your cart list</h1>
+  
 
   <div class="containers-list" *ngFor="let cleat of getCart()">
     <div class="container">
@@ -71,6 +72,18 @@
       <div class="price">
         <p>${{ baseLayer.price }}</p>
       </div>
+    </div>
+  </div>
+
+  <div class="container"
+   *ngFor="let ball of getCartB(); let jersey of getJerseyS()"
+   
+  >
+    <div class="total">
+      <p> </p>
+    </div>
+    <div class="btns">
+      <button>Pay with Card</button>
     </div>
   </div>
 

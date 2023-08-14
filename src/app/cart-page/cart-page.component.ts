@@ -22,7 +22,30 @@ export class CartPageComponent {
     private baseLayerService : BaseLayerService
     ){}
 
-  ngOnInit():void {}
+  ngOnInit():void {
+  }
+
+  // itemArray : Array = [
+  //   { id: 1, value: 23 },
+  //   { id: 2, value: 30 },
+  //   { id: 3, value: 7 },
+  //   { id: 4, value: 21 }
+  // ];
+
+  // sum: any = itemArray.map(a => a.value).reduce(function(a, b)
+  // {
+  //   return a + b;
+  // });
+  // console.log(sum);
+  // // expected output: 81
+
+  numbers: number[] = [1, 2, 3, 4, 5];
+
+// Using map and reduce
+  sum: number = this.numbers.reduce((acc, num) => acc + num, 0);
+
+  
+
 
   @Input() jersey : Jersey = {} as Jersey;
 
@@ -41,6 +64,7 @@ export class CartPageComponent {
   getBaseLayers(){
     return this.baseLayerService.get();
   }
+  
 
 
   isEmpty : boolean = false;
