@@ -1,9 +1,22 @@
 <app-header></app-header>
 <app-aside></app-aside>
 <div class="cart-page-main">
+  <h1 *ngIf="getCart().length + getCartB().length + getJerseyS().length + getShorts().length + getBaseLayers().length > 0">Your cart list</h1>
+  <h1 *ngIf="getCart().length + getCartB().length + getJerseyS().length + getShorts().length + getBaseLayers().length <= 0">Your cart list is empty</h1>
 
-  <h1>Your cart list</h1>
-  
+  <div class="containers-list top" *ngIf="getCart().length + getCartB().length + getJerseyS().length + getShorts().length + getBaseLayers().length > 0">
+    <div class="container">
+      <div class="title">
+        <p [routerLink]="'/itemPage'">Title</p>
+      </div>
+      <div class="brand">
+        <p>Brand</p>
+      </div>
+      <div class="price">
+        <p>Price</p>
+      </div>
+    </div>
+  </div>
 
   <div class="containers-list" *ngFor="let cleat of getCart()">
     <div class="container">
@@ -15,10 +28,10 @@
       </div>
       <div class="price">
         <p>${{ cleat.price }}</p>
+        <p></p>
       </div>
     </div>
   </div>
-
   <div class="containers-list" *ngFor="let ball of getCartB()">
     <div class="container">
       <div class="title">
@@ -32,7 +45,6 @@
       </div>
     </div>
   </div>
-
   <div class="containers-list" *ngFor="let jersey of getJerseyS()">
     <div class="container">
       <div class="title">
@@ -46,7 +58,6 @@
       </div>
     </div>
   </div>
-
   <div class="containers-list" *ngFor="let short of getShorts()">
     <div class="container">
       <div class="title">
@@ -60,7 +71,6 @@
       </div>
     </div>
   </div>
-
   <div class="containers-list" *ngFor="let baseLayer of getBaseLayers()">
     <div class="container">
       <div class="title">
@@ -74,17 +84,9 @@
       </div>
     </div>
   </div>
-
-  <div class="container"
-   *ngFor="let ball of getCartB(); let jersey of getJerseyS()"
-   
-  >
-    <div class="total">
-      <p> </p>
-    </div>
-    <div class="btns">
-      <button>Pay with Card</button>
-    </div>
+  <div  *ngIf="sum() > 0" class="total">
+    <h3>Total amount</h3>
+    <p> {{sum()}}$ </p>
   </div>
 
 </div>

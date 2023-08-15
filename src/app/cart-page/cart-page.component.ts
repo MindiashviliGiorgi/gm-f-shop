@@ -23,31 +23,33 @@ export class CartPageComponent {
     ){}
 
   ngOnInit():void {
+
   }
 
-  // itemArray : Array = [
-  //   { id: 1, value: 23 },
-  //   { id: 2, value: 30 },
-  //   { id: 3, value: 7 },
-  //   { id: 4, value: 21 }
-  // ];
+  items : Array<Cleat> = [];
 
-  // sum: any = itemArray.map(a => a.value).reduce(function(a, b)
-  // {
-  //   return a + b;
-  // });
-  // console.log(sum);
-  // // expected output: 81
+  sum(){
+    let result = 0;
 
-  numbers: number[] = [1, 2, 3, 4, 5];
+    let cleatsList = this.cartService.get();
+    cleatsList.forEach(a => result += a.price);
 
-// Using map and reduce
-  sum: number = this.numbers.reduce((acc, num) => acc + num, 0);
+    let ballsList = this.ballService.getB();
+    ballsList.forEach(x => result += x.price);
 
-  
+    let jerseysList = this.jerseyService.getJersey();
+    jerseysList.forEach(z => result += z.price);
+
+    let shortsList = this.shortService.getShort();
+    shortsList.forEach(s => result += s.price);
+
+    let beseLayersList = this.baseLayerService.get();
+    beseLayersList.forEach(b => result += b.price)
 
 
-  @Input() jersey : Jersey = {} as Jersey;
+    return result
+  }
+
 
   getCart(){
     return this.cartService.get();
@@ -64,10 +66,7 @@ export class CartPageComponent {
   getBaseLayers(){
     return this.baseLayerService.get();
   }
-  
-
 
   isEmpty : boolean = false;
-  
 
 }
